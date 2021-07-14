@@ -16,7 +16,7 @@ export default {
 <style lang="scss" scoped>
 header {
   height: 90px;
-  background: rgb(43, 43, 51);
+  background: rgb(45, 58, 70);
   display: flex;
   align-items: center;
   img {

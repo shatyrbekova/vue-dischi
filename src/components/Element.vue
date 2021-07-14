@@ -32,15 +32,15 @@ export default {
         
       .inner {
 
-         background:  rgb(43, 43, 51);
-         height: 510px;
+         background:  rgb(45, 58, 70);
+         height: 480px;
 
          padding: 40px;
          img{
             width:100%;
          }
          .title{
-             font-size: 27px;
+             font-size: 25px;
              padding: 12px;
              margin-top: 12px;
              font-weight: bold;
@@ -48,8 +48,8 @@ export default {
              
          }
          .title-informations{
-           margin-top: 15px;
-           color: rgb(129, 123, 123);
+           margin-top: 12px;
+           color: rgb(128, 128, 114);
            font-size: 20px;
            
          }
@@ -57,11 +57,11 @@ export default {
          
      }
      }
-     @media all and (max-width: 768px){
-         .inner{
-              height: 380px;
-              padding: 20px;
-         }
-     }
+    //  @media all and (max-width: 768px){
+    //      .inner{
+    //           height: 380px;
+    //           padding: 20px;
+    //      }
+     
      
 </style>
