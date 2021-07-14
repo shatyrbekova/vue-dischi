@@ -42,6 +42,7 @@ export default {
          .title{
              font-size: 25px;
              padding: 12px;
+             line-height:120%;
              margin-top: 12px;
              font-weight: bold;
              color:white;
