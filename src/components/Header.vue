@@ -8,24 +8,21 @@
 
 <script>
 export default {
-    name:'Header',
-    components:{
-
-    }
-}
+  name: "Header",
+  components: {}
+};
 </script>
 
 <style lang="scss" scoped>
-      header{
-          height:90px;
-          background:  rgb(43, 43, 51);
-          display:flex;
-          align-items: center;
-          img{
-              width:80px;
-            
-          }
-      }
+header {
+  height: 90px;
+  background: rgb(43, 43, 51);
+  display: flex;
+  align-items: center;
+  img {
+    width: 80px;
+  }
+}
 </style>
 
 
