@@ -1,6 +1,6 @@
 <template>
-    <main class="row">
-        <Element  class="col-3 col-md-2" v-for=" (element, index) in elements" :key="index"
+    <main class="row main-container">
+        <Element  class="col-4 col-md-3" v-for=" (element, index) in elements" :key="index"
          :poster='element.poster'
          :title='element.title'
          :author='element.author'
@@ -26,9 +26,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-   main{
-       background: rgb(43, 43, 58);
-   
+   .main-container{
+       
+   margin-top: 30px;
+   margin-bottom:30px;
    }
 </style>
 

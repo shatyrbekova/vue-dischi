@@ -23,5 +23,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+     .element-container{
+         margin: 15px 0;
+         text-align: center;
+        
+      .inner {
 
+         background: rgb(92, 90, 90);
+         height: 420px;
+
+         padding: 60px;
+         img{
+            width:100%;
+         }
+         .title{
+             font-size: 24px;
+             font-weight: bold;
+             color:white;
+             
+         }
+         .author, .year{
+             color: rgb(124, 122, 122);
+             font-size: 18px;
+           
+         }
+         
+     }
+     }
+     
 </style>
