@@ -9,7 +9,7 @@
   </div>
 </template>
 
-
+//? perchè non funziona Bootstrap
 
 <script>
 import axios from 'axios';
