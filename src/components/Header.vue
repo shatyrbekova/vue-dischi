@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="logo">
-           
+           <img src="../assets/spotify-logo.png" alt="">
         </div>
     </header>
 </template>
@@ -18,10 +18,13 @@ export default {
 <style lang="scss" scoped>
       header{
           height:90px;
-          background: rgb(82, 79, 79);
-        //   background-image: url('../assets/spotify-logo.png');
-       
-        //   background-repeat: no-repeat;
+          background:  rgb(43, 43, 51);
+          display:flex;
+          align-items: center;
+          img{
+              width:80px;
+            
+          }
       }
 </style>
 

@@ -1,6 +1,6 @@
 <template>
     <main class="row main-container">
-        <Element  class="col-4 col-md-3" v-for=" (element, index) in elements" :key="index"
+        <Element  class="col-4  col-sm-4 col-md-3 col-lg-3" v-for=" (element, index) in elements" :key="index"
          :poster='element.poster'
          :title='element.title'
          :author='element.author'
