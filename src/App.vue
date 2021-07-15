@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+     <Loader v-if="elements.length == 0" />
     <!-- quando viene lanciato @cerca, di seguito verrà lanciato il metodo searchAlbum 
     -->
     <Header @search="searchGenresList"  :genresList="genresList"
@@ -18,11 +19,14 @@
 import axios from "axios";
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
+import Loader from "./components/Loader.vue";
+
 export default {
   name: "App",
   components: {
     Header,
     Main,
+    Loader
   },
   data() {
     return {
@@ -48,6 +52,10 @@ export default {
         // console.log(this.genresList)
       });
   },
+  computed: {
+
+  
+  },
   methods: {
     searchGenresList() {
       this.elements.forEach((disc) => {
@@ -61,7 +69,9 @@ export default {
     searchAlbum(ricercaTitolo){ //usiamo il filter per filtrare i titoli 
 
        this.filteredTitles = this.elements.filter((item)=>{
-          return item.title.includes(ricercaTitolo); //questo qui o TRUE o FALSE 
+          return item.title.toLowerCase().includes(ricercaTitolo.trim())||
+                 item.title.toUpperCase().includes(ricercaTitolo.trim())
+          ; //questo qui o TRUE o FALSE 
                 
 
        })
