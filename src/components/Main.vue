@@ -36,25 +36,28 @@ export default {
     .col-lg-12 {
       width: 20%;
       float: left;
-    }
-  
-   @media (max-width: 568px){
-
-   }
- 
-  @media (max-width: 768px) {
-    .col-sm-12 {
-      width: 50%;
-      float: left;
-    }
-  }
+    };
 
   @media (max-width: 992px){
     .col-md-12{
       width: calc(100% / 3);
       float:left;
     }
-  }
+  };
+   @media (max-width: 768px) {
+    .col-sm-12 {
+      width: 50%;
+      float: left;
+    }
+  };
+    @media (max-width: 568px){
+     .col-xs-12{
+       width:100%;
+       float:left;
+     }
+   }
+ 
+ 
  
 }
 </style>

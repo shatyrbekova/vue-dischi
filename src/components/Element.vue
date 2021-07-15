@@ -40,12 +40,13 @@ export default {
             width:100%;
          }
          .title{
-             font-size: 25px;
+             font-size: 24px;
              padding: 12px;
              line-height:100%;
              margin-top: 12px;
              font-weight: bold;
              color:white;
+             text-transform: uppercase;
              
          }
          .title-informations{

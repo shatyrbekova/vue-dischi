@@ -2,11 +2,17 @@
     <header>
         <div class="logo">
            <img src="../assets/spotify-logo.png" alt="">
+
               <!-- //!Bonus Creare un input per la ricerca all’interno del titolo  -->
 
-              <!-- <input type="text" placeholder="Search" v-model="ricercaTitolo"
-               @keyup.enter="$emit('cerca', ricercaTitolo "
-              > -->
+             <!-- Quando l'utente digita enter, l'input fa l'emit verso
+              il padre (App.vue)  di search con il dato ricerca Titolo-->
+
+              <!--  cerca fai emit di questo evento, portando con te anche ricercaTitolo-->
+              <input type="text" placeholder="Search" v-model="ricercaTitolo"
+        
+               @keyup.enter="$emit('cerca', ricercaTitolo)"
+              >
 
 
            <!-- //*Creare una select per filtrare i dischi in base al genere -->
@@ -15,11 +21,7 @@
               <option v-for="(genre, index) in genresList" :key="index" :value="genre" >
                 {{genre}}
               </option>
-               <!-- <option value="" >Select your favorite genre</option>
-               <option value="rock">Rock</option>
-               <option value="pop">Pop</option>
-               <option value="jazz">Jazz</option>
-               <option value="metal">Metal</option> -->
+          
             </select>
            
         </div>
@@ -37,6 +39,7 @@ export default {
     return {
       searchGenre:'',
       ricercaTitolo:'',
+      
       
     }
   }
