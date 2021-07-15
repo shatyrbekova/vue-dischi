@@ -2,12 +2,17 @@
     <header>
         <div class="logo">
            <img src="../assets/spotify-logo.png" alt="">
+              <!-- //!Bonus Creare un input per la ricerca all’interno del titolo  -->
+
+              <!-- <input type="text" placeholder="Search" v-model="ricercaTitolo"
+               @keyup.enter="$emit('cerca', ricercaTitolo "
+              > -->
+
 
            <!-- //*Creare una select per filtrare i dischi in base al genere -->
-            <!-- //?Come si crea il select  = fatto
-            //?Come creare una funzione con il filter  -->
-            <select name="select" v-model="searchGenre" @click="$emit('search','searchGenre') ">
-              <option v-for="(genre, index) in filteredElements" :key='index' :value="genre" >
+         
+            <select name="select" v-model="searchGenre" @click="$emit('search', searchGenre)">
+              <option v-for="(genre, index) in genresList" :key="index" :value="genre" >
                 {{genre}}
               </option>
                <!-- <option value="" >Select your favorite genre</option>
@@ -25,11 +30,14 @@
 export default {
   name: "Header",
   props:{
-   filteredElements: Array
+  //  filteredElements: Array,
+   genresList: Array,
   },
   data(){
     return {
       searchGenre:'',
+      ricercaTitolo:'',
+      
     }
   }
 };

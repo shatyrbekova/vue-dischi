@@ -1,11 +1,10 @@
 <template>
   <div id="app">
-    <Header @search="searchAlbum" />
-   
-     <div class="container">
-        <Main :elements="elements" />
-       
-     </div>
+    <Header @search="searchGenresList"  :genresList="genresList" />
+
+    <div class="container">
+      <Main :elements="elements" />
+    </div>
   </div>
 </template>
 
@@ -19,31 +18,44 @@ export default {
   name: "App",
   components: {
     Header,
-    Main
+    Main,
   },
   data() {
     return {
       elements: [],
-      filteredElements:[],
-      
+      // filteredElements:[],
+      genresList: [],
     };
   },
   created() {
     axios
       .get("https://flynn.boolean.careers/exercises/api/array/music")
-      .then(result => {
+      .then((result) => {
         this.elements = result.data.response;
-        this.searchAlbum('')
+        // this.searchAlbum('');
+        // this.elements.forEach((disc)=>{
+        //    if (!this.genresList.includes(disc.genre)){
+        //         this.genresList.push(disc.genre)
+        //    }
+        // })
+        // console.log(this.genresList)
       });
   },
-  methods:{
-
-    searchAlbum(searchGenre){
-      this.filteredElements =this.elements.filter((item)=>{
-            return item.genre.includes(searchGenre);
-      })
-    }
-  }
+  methods: {
+    searchGenresList() {
+      this.elements.forEach((disc) => {
+        if (!this.genresList.includes(disc.genre)) {
+          this.genresList.push(disc.genre);
+        }
+      });
+      console.log(this.genresList);
+    },
+    // searchAlbum(searchGenre){
+    //   this.filteredElements =this.elements.filter((item)=>{
+    //         return item.genre.includes(searchGenre);
+    //   })
+    // }
+  },
 };
 </script>
 

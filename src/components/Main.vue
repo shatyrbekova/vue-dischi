@@ -21,7 +21,8 @@ export default {
     Element
   },
   props: {
-    elements: Array
+    elements: Array,
+    // genresList: Array,
   }
 };
 </script>
