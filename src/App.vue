@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header @search="searchAlbum" />
    
      <div class="container">
         <Main :elements="elements" />
@@ -23,7 +23,9 @@ export default {
   },
   data() {
     return {
-      elements: []
+      elements: [],
+      filteredElements:[],
+      
     };
   },
   created() {
@@ -31,7 +33,16 @@ export default {
       .get("https://flynn.boolean.careers/exercises/api/array/music")
       .then(result => {
         this.elements = result.data.response;
+        this.searchAlbum('')
       });
+  },
+  methods:{
+
+    searchAlbum(searchGenre){
+      this.filteredElements =this.elements.filter((item)=>{
+            return item.genre.includes(searchGenre);
+      })
+    }
   }
 };
 </script>

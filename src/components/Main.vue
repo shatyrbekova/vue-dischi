@@ -5,6 +5,7 @@
          :title='element.title'
          :author='element.author'
          :year='element.year'
+         :genre='element.genre'
         
         />
     </main>
@@ -27,8 +28,8 @@ export default {
 
 <style lang="scss" scoped>
 .main-container {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 
 
     .col-lg-12 {
@@ -37,7 +38,7 @@ export default {
     }
   
    @media (max-width: 568px){
-     
+
    }
  
   @media (max-width: 768px) {

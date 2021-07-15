@@ -35,14 +35,14 @@ export default {
          background:  rgb(45, 58, 70);
          height: 480px;
 
-         padding: 40px;
+         padding: 25px;
          img{
             width:100%;
          }
          .title{
              font-size: 25px;
              padding: 12px;
-             line-height:120%;
+             line-height:100%;
              margin-top: 12px;
              font-weight: bold;
              color:white;
